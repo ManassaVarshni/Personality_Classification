@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<b style="color:rgb(78, 75, 75)">{{ prediction_text }}</b>
+
+<br>
+<br>
+
+<b style="color:rgb(78, 75, 75)">{{ score }}</b>
+
+<br>
+<br>
+
+{% if prediction_text == 1 %}
+    <div>
+    <img src="{{url_for('static', filename='one.png')}}" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+{% elif prediction_text == 2 %}
+    <img src="{{url_for('static', filename='two.png')}}" class="img-responsive margin" style="width:100%" alt="Image">
+{% elif prediction_text == 3 %}
+    <img src="{{url_for('static', filename='three.png')}}" class="img-responsive margin" style="width:100%" alt="Image">
+{% elif prediction_text == 4 %}
+    <img src="{{url_for('static', filename='four.png')}}" class="img-responsive margin" style="width:100%" alt="Image">
+{% elif prediction_text == 5 %}
+    <div>
+    <img src="{{url_for('static', filename='five.png')}}" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+{% elif prediction_text == 6 %}
+    <img src="{{url_for('static', filename='six.png')}}" class="img-responsive margin" style="width:100%" alt="Image">
+{% elif prediction_text == 7 %}
+    <img src="{{url_for('static', filename='seven.png')}}" class="img-responsive margin" style="width:100%" alt="Image">
+{% elif prediction_text == 8 %}
+    <img src="{{url_for('static', filename='eight.png')}}" class="img-responsive margin" style="width:100%" alt="Image">
+{% elif prediction_text == 9 %}
+    <img src="{{url_for('static', filename='nine.png')}}" class="img-responsive margin" style="width:100%" alt="Image">
+{% elif prediction_text == 10 %}
+    <img src="{{url_for('static', filename='ten.png')}}" class="img-responsive margin" style="width:100%" alt="Image">
+{% endif %}
+
+{% endblock content %}

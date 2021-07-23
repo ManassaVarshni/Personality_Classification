@@ -1,0 +1,522 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class = "content-section">
+        <form method = "POST" action = "{{ url_for('predict')}}">
+            {{ form.hidden_tag() }}
+            <fieldset class = "form-check">
+                <legend class = "border-bottom mb-4">Take up the test here!</legend>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question1.label }}</b><br>
+                    {% for subfield in form.question1 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question2.label }}</b><br>
+                    {% for subfield in form.question2 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question3.label }}</b><br>
+                    {% for subfield in form.question3 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question4.label }}</b><br>
+                    {% for subfield in form.question4 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question5.label }}</b><br>
+                    {% for subfield in form.question5 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question6.label }}</b><br>
+                    {% for subfield in form.question6 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question7.label }}</b><br>
+                    {% for subfield in form.question7 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question8.label }}</b><br>
+                    {% for subfield in form.question8 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question9.label }}</b><br>
+                    {% for subfield in form.question9 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question10.label }}</b><br>
+                    {% for subfield in form.question10 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question11.label }}</b><br>
+                    {% for subfield in form.question11 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question12.label }}</b><br>
+                    {% for subfield in form.question12 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question13.label }}</b><br>
+                    {% for subfield in form.question13 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question14.label }}</b><br>
+                    {% for subfield in form.question14 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question15.label }}</b><br>
+                    {% for subfield in form.question15 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question16.label }}</b><br>
+                    {% for subfield in form.question16 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question17.label }}</b><br>
+                    {% for subfield in form.question17 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question18.label }}</b><br>
+                    {% for subfield in form.question18 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question19.label }}</b><br>
+                    {% for subfield in form.question19 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question20.label }}</b><br>
+                    {% for subfield in form.question20 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question21.label }}</b><br>
+                    {% for subfield in form.question21 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question22.label }}</b><br>
+                    {% for subfield in form.question22 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question23.label }}</b><br>
+                    {% for subfield in form.question23 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question24.label }}</b><br>
+                    {% for subfield in form.question24 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question25.label }}</b><br>
+                    {% for subfield in form.question25 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question26.label }}</b><br>
+                    {% for subfield in form.question26 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question27.label }}</b><br>
+                    {% for subfield in form.question27 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question28.label }}</b><br>
+                    {% for subfield in form.question28 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question29.label }}</b><br>
+                    {% for subfield in form.question29 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question30.label }}</b><br>
+                    {% for subfield in form.question30 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question31.label }}</b><br>
+                    {% for subfield in form.question31 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question32.label }}</b><br>
+                    {% for subfield in form.question32 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question33.label }}</b><br>
+                    {% for subfield in form.question33 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question34.label }}</b><br>
+                    {% for subfield in form.question34 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question35.label }}</b><br>
+                    {% for subfield in form.question35 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question36.label }}</b><br>
+                    {% for subfield in form.question36 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question37.label }}</b><br>
+                    {% for subfield in form.question37 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question38.label }}</b><br>
+                    {% for subfield in form.question38 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question39.label }}</b><br>
+                    {% for subfield in form.question39 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question40.label }}</b><br>
+                    {% for subfield in form.question40 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question41.label }}</b><br>
+                    {% for subfield in form.question41 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question42.label }}</b><br>
+                    {% for subfield in form.question42 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question43.label }}</b><br>
+                    {% for subfield in form.question43 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question44.label }}</b><br>
+                    {% for subfield in form.question44 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question45.label }}</b><br>
+                    {% for subfield in form.question45 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question46.label }}</b><br>
+                    {% for subfield in form.question46 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question47.label }}</b><br>
+                    {% for subfield in form.question47 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question48.label }}</b><br>
+                    {% for subfield in form.question48 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question49.label }}</b><br>
+                    {% for subfield in form.question49 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+                <div class = "form-check">
+                    <b style="color:rgb(78, 75, 75)">{{ form.question50.label }}</b><br>
+                    {% for subfield in form.question50 %}
+                    <tr>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield(class = "form-check-input") }}</b></td>
+                        <td><b style="color:rgb(78, 75, 75)">{{ subfield.label }}</b></td>
+                    </tr>
+                    {% endfor %}                  
+                </div>
+
+            </fieldset>
+            <div class = "form-group">
+                <td><b style="color:rgb(78, 75, 75)">{{ form.submit(class = "btn btn-outline-info") }}</b></td>
+            </div>
+        </form>
+
+    </div>
+    <style>
+        ul{
+           list-style-type: none;
+        }
+     </style>
+
+{% endblock content %}
